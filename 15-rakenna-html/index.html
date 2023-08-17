@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="layout.css">
+    <title>Javascriptillä html</title>
+</head>
+<body>
+    
+
+    
+    <script>
+        const runko = document.body;
+        const headerElement = document.createElement("header");
+        headerElement.setAttribute("class","ylatunniste") 
+        const h1Element = document.createElement("h1");
+        h1Element.textContent = "Tämä on artikkelin otsikko";
+        const pElement = document.createElement("p");
+        pElement.textContent = "Ensimmäinen kappale! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt laborum placeat quos enim aperiam nihil possimus! Eveniet distinctio velit beatae nulla itaque eligendi aspernatur eius! Architecto repellat corrupti unde possimus?"
+
+        headerElement.appendChild(h1Element);
+        headerElement.appendChild(pElement);
+
+        runko.prepend(headerElement);
+
+        const sectionElement = document.createElement("section");
+        sectionElement.id = "rinnakkain";
+        const pElementInSection = document.createElement("p");
+        pElementInSection.textContent = "Sectionin sisällä oleva kappale! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt laborum placeat quos enim aperiam nihil possimus! Eveniet distinctio velit beatae nulla itaque eligendi aspernatur eius! Architecto repellat corrupti unde possimus?";
+        const figureElement = document.createElement("figure");
+        figureElement.id = "kuvanpaikka";
+        let imgElement = document.createElement("img");
+        imgElement.src = "javascript.png";  // Set the image source
+
+        sectionElement.appendChild(pElementInSection);
+        figureElement.appendChild(imgElement);
+        sectionElement.appendChild(figureElement);
+        var bodyElement = document.body;
+        bodyElement.insertBefore(sectionElement, bodyElement.children[1]);
+
+        const footerElement = document.createElement("footer");
+        const pElementInFooter = document.createElement("p");  
+        pElementInFooter.textContent = "© 2023 Tomi Dostinov";
+        footerElement.appendChild(pElementInFooter);
+        var bodyElement = document.body;
+        bodyElement.insertBefore(footerElement, bodyElement.children[2]); 
+
+        sectionElement.style.display = "flex";
+        sectionElement.style.alignItems = "center";
+
+        imgElement.style.maxHeight = "200px";
+        imgElement.style.width = "auto";
+    </script>
+</body>
+</html>

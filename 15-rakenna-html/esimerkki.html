@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="div1">
+        <p id="p1">This is a paragraph.</p>
+         <p id="p2">This is another paragraph.</p>
+    </div> -->
+
+    <script>
+        const runko = document.body;
+        const osa = document.createElement("div");
+        runko.prepend(osa);
+        osa.setAttribute("id","div1");
+        const para1 = document.createElement("p");
+        para1.setAttribute("id","p1");
+        const node = document.createTextNode("This is a paragraph.");
+        para1.appendChild(node);
+        document.getElementById("div1").appendChild(para1);
+
+        const para2 = document.createElement("p");
+        para2.setAttribute("id","p2");
+        const node2 = document.createTextNode("This is another paragraph.");
+        para2.appendChild(node2);
+        document.getElementById("div1").appendChild(para2);
+
+        const para3 = document.createElement("p");
+        const node3 = document.createTextNode(" ");
+        para3.appendChild(node3);
+        document.getElementById("div1").appendChild(para3);
+        
+        /* const para = document.createElement("p");
+        const node = document.createTextNode("This is new.");
+        para.appendChild(node);
+        const element = document.getElementById("div1");
+        element.appendChild(para); */
+    </script>
+</body>
+</html>
